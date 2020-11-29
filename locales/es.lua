@@ -36,7 +36,7 @@ Locales ['es'] = {
   -- lsd
   ['lsd_processingstarted'] = 'Procesando ~g~LSD~s~...',
   ['lsd_processingfull'] = 'Procesado ~r~cancelado~s~ ¡porque tienes el inventario lleno!',
-  ['lsd_processprompt'] = 'Presiona ~INPUT_CONTEXT~ para comenzar a ~gProcesar LSD~s~.',
+  ['lsd_processprompt'] = 'Presiona ~INPUT_CONTEXT~ para comenzar a ~g~Procesar LSD~s~.',
   ['lsd_processingenough'] = 'Debes tener ~b~1x~s~ ~g~LSA~s~ y ~b~1x~s~ ~g~Cloruro De Tionilo~s~ encima para procesar.',
   ['lsd_processed'] = 'Has procesado ~b~1x~s~ ~g~LSD~s~',
   ['lsd_processingtoofar'] = 'El procesado ha sido ~r~cancelado~s~ porque te has alejado demasiado.',
@@ -87,17 +87,42 @@ Locales ['es'] = {
   ['licenseshop_prompt'] = 'Presiona ~INPUT_CONTEXT~ para abrir la ~g~Tienda De Licencias~s~.',
   ['license_bought'] = 'Has comprado ~b~1x~s~ ~y~%s~s~ por ~g~$%s~s~',
   ['license_inventoryfull'] = 'Ya tienes esta licencia.',
+  ['license_notenough'] = 'you cannot afford a ~b~%s~s~!',
+  ['license_wrongjob'] = 'you don\'t have the right job or grade to acces the ~g~License Shop~s~.',
+  
   
   -- moneywash
-  ['moneywash_washed'] = 'Has lavado ~r~$%s~s~',
-  ['moneywash_title'] = 'Lavado de dinero',
+  ['moneywash_washed'] = 'has lavado ~r~$%s~s~',
+  ['moneywash_title'] = 'Lavadora de dinero',
   ['moneywash_wash'] = 'Lava todo el dinero negro.',
-  ['moneywash_prompt'] = 'Presiona ~INPUT_CONTEXT~ para abrir el ~r~Menu de Lavado de dinero~s~.',
+  ['moneywash_prompt'] = 'presiona ~INPUT_CONTEXT~ para abrir el ~r~Lavado de Dinero~s~.',
   
   -- blips
-  ['blip_weedfield'] = 'Campo de cannabis',
-  ['blip_weedprocessing'] = 'Tratamiento de Cannabis',
-  ['blip_methfield'] = 'Campo de Metanfetamina',
-  ['blip_methprocessing'] = 'Tratamiento de Metanfetamina',
+  ['blip_weedfield'] = 'Campo de hierba',
+  ['blip_weedprocessing'] = 'Procesado de hierba',
+  ['blip_HydrochloricAcidFarm'] = 'Granja de ácido clorhídrico',
+  ['blip_SulfuricAcidFarm'] = 'Granja de ácido sulfúrico',
+  ['blip_SodiumHydroxideFarm'] = 'Granja de hidróxido de sodio',
+  ['blip_ChemicalsFarm'] = 'Granja de productos químicos',
+  ['blip_ChemicalsProcessing'] = 'Procesamiento de productos químicos',
+  ['blip_CokeFarm'] = 'Campo de Coca',
+  ['blip_Cokeprocessing'] = 'Procesado de coque',
+  ['blip_lsdprocessing'] = 'Procesado de LSD',
+  ['blip_thionylchlorideprocessing'] = 'Procesado de cloruro de tionilo',
+  ['blip_heroinfield'] = 'Campo de amapolas',
+  ['blip_heroinprocessing'] = 'Procesado de heroína',
+  ['blip_licenseshop'] = 'Tienda de licencias',
+  ['blip_moneywash'] = 'Lavadora de dinero',
+  ['blip_methprocessing'] = 'Procesado de metanfetamina',
   ['blip_drugdealer'] = 'Narcotraficante',
+
+  -- teleport
+  ['teleport_enter'] = 'Presiona ~g~E ~w~para entrar.',
+
+  -- Cops
+  ['cops_notenough'] = 'No puedes participar en actividades ilegales a menos que haya suficientes policías en línea.',
+
+  -- Vehicle
+  ['need_on_foot'] = 'No puedes hacer esto mientras estás en un vehículo.',
+
 }
