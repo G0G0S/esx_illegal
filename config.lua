@@ -1,19 +1,19 @@
 Config = {}
 
-Config.Locale = 'en'
+Config.Locale = 'es'
 
 --Options
 
-Config.EnableMapsBlimps = true -- Enables the blips on the map.
+Config.EnableMapsBlimps = false -- Enables the blips on the map.
 Config.GiveBlack = true -- give black money? if disabled it'll give regular cash.
 Config.ChemicalsLicenseEnabled = true --Will Enable or Disable the need for a Chemicals License.
-Config.MoneyWashLicenseEnabled = true --Will Enable or Disable the need for a MoneyWash License.
+Config.MoneyWashLicenseEnabled = false --Will Enable or Disable the need for a MoneyWash License.
 Config.RestrictLicenseShopAcces = false --Will Restrict the access to the license shop to players with a specific job and grade.
-Config.RequireCopsOnline = false --Will require that cops are online to pickup or process.
-Config.EnableCopCheckMessage = true --Will enable a message in the console when the server refreshes the current cop count.
+Config.RequireCopsOnline = true --Will require that cops are online to pickup or process.
+Config.EnableCopCheckMessage = false --Will enable a message in the console when the server refreshes the current cop count.
 
 --The time the server will wait until checking the current cop count again (in Minutes).
-Config.CopsCheckRefreshTime = 30
+Config.CopsCheckRefreshTime = 5
 
 --The time it takes to process one item
 Config.Delays = {
@@ -27,16 +27,16 @@ Config.Delays = {
 
 --Drug Dealer item Prices
 Config.DrugDealerItems = {
-	heroin = 546,
-	marijuana = 784,
-	meth = 1635,
-	coke = 1027,
-	lsd = 2178,
+	heroin = 300,
+	marijuana = 500,
+	meth = 1400,
+	coke = 800,
+	lsd = 1900,
 }
 
 --License Shop Item Prices
 Config.Licenses = {
-	moneywash = 75000,
+	--moneywash = 75000,
 	chemicalslisence = 100000,
 }
 
@@ -60,23 +60,23 @@ Config.AllowedJobs = {
 --Only needed when RequireCopsOnline is set to true
 Config.Cops = {
 	Heroin = 0,
-	Weed = 1,
-	Coke = 2,
-	Meth = 3,
-	LSD = 4,
-	Chemicals = 1,
-	MoneyWash = 2,
-	ChemicalsMenu = 3,
-	DrugDealer = 0,
-	LicenseShop = 1,
+	Weed = 0,
+	Coke = 0,
+	Meth = 0,
+	LSD = 0,
+	Chemicals = 0,
+	MoneyWash = 0,
+	ChemicalsMenu = 0,
+	DrugDealer = 4,
+	LicenseShop = 0,
 }
 
 --Interior Teleport Locations
 Config.Interiors = {
-	Weed = {EnteranceCoords = vector3(-1127.86, 2708.03, 18.8), ExitCoords = vector3(1066.06, -3183.45, -38.16)},
-	Meth = {EnteranceCoords = vector3(1454.66, -1651.75, 68.00), ExitCoords = vector3(997.22, -3200.43, -35.39)},
-	Coke = {EnteranceCoords = vector3(143.15, -1656.22, 30.49), ExitCoords = vector3(1088.65, -3187.70, -38.00)},
-	Moneywash = {EnteranceCoords = vector3(48.19, 6305.98, 32.36), ExitCoords = vector3(1138.02, -3198.94, -38.66)},
+	Weed = {EnteranceCoords = vector3(-317.11, -2778.90, 5.00), ExitCoords = vector3(1066.06, -3183.45, -38.16)},
+	Meth = {EnteranceCoords = vector3(1017.67, -2529.29, 28.30), ExitCoords = vector3(997.22, -3200.43, -35.39)},
+	Coke = {EnteranceCoords = vector3(1092.58, -2251.89, 31.23), ExitCoords = vector3(1088.65, -3187.70, -38.00)},
+	Moneywash = {EnteranceCoords = vector3(-1933.67, 2039.53, 140.83), ExitCoords = vector3(1138.02, -3198.94, -38.66)},
 	Cartel = {EnteranceCoords = vector3(1400.51, 1127.68, 115.33), ExitCoords = vector3(1400.48, 1129.57, 114.33)},
 	DocumentForgeryOffice = {EnteranceCoords = vector3(15.97, -1032.29, 30.47), ExitCoords = vector3(1173.68, -3196.67, -39.00)},
 }
@@ -84,37 +84,41 @@ Config.Interiors = {
 --Drug Zones
 Config.CircleZones = {
 	--Weed
-	WeedField = {coords = vector3(2224.64, 5577.03, 53.85), blimpcoords = vector3(2224.64, 5577.03, 53.85), name = _U('blip_weedfield'), color = 25, sprite = 496, radius = 0, enabled = true},
-	WeedProcessing = {coords = vector3(1035.86, -3205.20, -38.17), blimpcoords = vector3(-1127.86, 2708.03, 18.8), name = _U('blip_weedprocessing'), color = 25, sprite = 496, radius = 0.0, enabled = true},
+	WeedField = {coords = vector3(1065.32, 4240.71, 35.87), blimpcoords = vector3(1065.32, 4240.71, 35.87), name = _U('blip_weedfield'), color = 25, sprite = 496, radius = 0, enabled = true},
+	WeedProcessing = {coords = vector3(1035.86, -3205.20, -38.17), blimpcoords = vector3(-317.11, -2778.90, 5.00), name = _U('blip_weedprocessing'), color = 25, sprite = 496, radius = 0.0, enabled = true},
 	
 	--meth
-	MethProcessing = {coords = vector3(1007.27, -3197.93, -38.99), blimpcoords = vector3(1454.66, -1651.75, 68.00), name = _U('blip_methprocessing'), color = 5, sprite = 51, radius = 0.0, enabled = true},
-	HydrochloricAcidFarm = {coords = vector3(2724.12, 1583.03, 24.5), blimpcoords = vector3(2724.12, 1583.03, 24.5), name = _U('blip_HydrochloricAcidFarm'), color = 5, sprite = 51, radius = 0.0, enabled = true},
-	SulfuricAcidFarm = {coords = vector3(3333.34, 5160.22, 18.31), blimpcoords = vector3(3333.34, 5160.22, 18.31), name = _U('blip_SulfuricAcidFarm'), color = 5, sprite = 51, radius = 0.0, enabled = true},
-	SodiumHydroxideFarm = {coords = vector3(3617.04, 3738.73, 28.69), blimpcoords = vector3(3617.04, 3738.73, 28.69), name = _U('blip_SodiumHydroxideFarm'), color = 5, sprite = 51, radius = 0.0, enabled = true},
+	MethProcessing = {coords = vector3(1007.27, -3197.93, -38.99), blimpcoords = vector3(1017.67, -2529.29, 28.30), name = _U('blip_methprocessing'), color = 5, sprite = 51, radius = 0.0, enabled = true},
+	HydrochloricAcidFarm = {coords = vector3(172.11, -3334.76, 4.78), blimpcoords = vector3(172.11, -3334.76, 4.78), name = _U('blip_HydrochloricAcidFarm'), color = 5, sprite = 51, radius = 0.0, enabled = true},
+	SulfuricAcidFarm = {coords = vector3(1501.44, 6324.24, 23.08), blimpcoords = vector3(1501.44, 6324.24, 23.08), name = _U('blip_SulfuricAcidFarm'), color = 5, sprite = 51, radius = 0.0, enabled = true},
+	SodiumHydroxideFarm = {coords = vector3(1729.63, 4735.82, 41.09), blimpcoords = vector3(1729.63, 4735.82, 41.09), name = _U('blip_SodiumHydroxideFarm'), color = 5, sprite = 51, radius = 0.0, enabled = true},
 	
 	--Chemicals
-	ChemicalsField = {coords = vector3(817.46, -3192.84, 5.9), blimpcoords = vector3(817.46, -3192.84, 5.9), name = _U('blip_ChemicalsFarm'), color = 3, sprite = 499, radius = 0.0, enabled = true},
-	ChemicalsConvertionMenu = {coords = vector3(3718.8, 4533.45, 21.67), blimpcoords = vector3(3718.8, 4533.45, 21.67), name = _U('blip_ChemicalsProcessing'), color = 3, sprite = 499, radius = 0.0, enabled = true},
+	ChemicalsField = {coords = vector3(-31.51, -2549.77, 5.01), blimpcoords = vector3(-31.51, -2549.77, 5.01), name = _U('blip_ChemicalsFarm'), color = 3, sprite = 499, radius = 0.0, enabled = true},
+	ChemicalsConvertionMenu = {coords = vector3(49.50, -782.34, 16.79), blimpcoords = vector3(49.50, -782.34, 16.79), name = _U('blip_ChemicalsProcessing'), color = 3, sprite = 499, radius = 0.0, enabled = true},
 	
 	--Coke
-	CokeField = {coords = vector3(-310.43, 2496.34, 76.60), blimpcoords = vector3(-310.43, 2496.34, 76.60), name = _U('blip_CokeFarm'), color = 4, sprite = 501, radius = 0.0, enabled = true},
-	CokeProcessing = {coords = vector3(1090.00, -3194.93, -38.99), blimpcoords = vector3(143.15, -1656.22, 30.49), name = _U('blip_Cokeprocessing'),color = 4, sprite = 501, radius = 0.0, enabled = true},
+	CokeField = {coords = vector3(-2197.01, 5184.54, 15.47), blimpcoords = vector3(-2197.01, 5184.54, 15.47), name = _U('blip_CokeFarm'), color = 4, sprite = 501, radius = 0.0, enabled = true},
+	CokeProcessing = {coords = vector3(1090.00, -3194.93, -38.99), blimpcoords = vector3(1092.58, -2251.89, 31.23), name = _U('blip_Cokeprocessing'),color = 4, sprite = 501, radius = 0.0, enabled = true},
 	
 	--LSD
-	lsdProcessing = {coords = vector3(91.26, 3749.31, 40.77), blimpcoords = vector3(91.26, 3749.31, 40.77), name = _U('blip_lsdprocessing'),color = 12, sprite = 364, radius = 0.0, enabled = true},
-	thionylchlorideProcessing = {coords = vector3(1903.98, 4922.70, 48.16), blimpcoords = vector3(1903.98, 4922.70, 48.16), name = _U('blip_thionylchlorideprocessing'),color = 12, sprite = 364, radius = 0.0, enabled = true},
+	lsdProcessing = {coords = vector3(2733.51, 1476.43, 45.30), blimpcoords = vector3(2733.51, 1476.43, 45.30), name = _U('blip_lsdprocessing'),color = 12, sprite = 364, radius = 0.0, enabled = true},
+	thionylchlorideProcessing = {coords = vector3(2434.09, 4969.13, 42.35), blimpcoords = vector3(2434.09, 4969.13, 42.35), name = _U('blip_thionylchlorideprocessing'),color = 12, sprite = 364, radius = 0.0, enabled = true},
 	
 	--Heroin
-	HeroinField = {coords = vector3(16.34, 6875.94, 12.64), blimpcoords = vector3(16.34, 6875.94, 12.64), name = _U('blip_heroinfield'), color = 7, sprite = 497, radius = 0, enabled = true},
-	HeroinProcessing = {coords = vector3(-62.15, 6391.40, 31.49), blimpcoords = vector3(-62.15, 6391.40, 31.49), name = _U('blip_heroinprocessing'), color = 7, sprite = 497, radius = 0.0, enabled = true},
+	HeroinField = {coords = vector3(2706.73, -842.03, 24.21), blimpcoords = vector3(2706.73, -842.03, 24.21), name = _U('blip_heroinfield'), color = 7, sprite = 497, radius = 0, enabled = true},
+	HeroinProcessing = {coords = vector3(608.76, -459.34, 24.74), blimpcoords = vector3(608.76, -459.34, 24.74), name = _U('blip_heroinprocessing'), color = 7, sprite = 497, radius = 0.0, enabled = true},
 
 	--License
-	LicenseShop = {coords = vector3(707.17, -962.5, 30.4), blimpcoords = vector3(707.17, -962.5, 30.4), name = _U('blip_licenseshop'),color = 9, sprite = 498, radius = 0.0, enabled = true},
+	LicenseShop = {coords = vector3(718.1, -973.6, 30.4), blimpcoords = vector3(718.1, -973.6, 30.4), name = _U('blip_licenseshop'),color = 9, sprite = 498, radius = 0.0, enabled = true},
 
 	--DrugDealer
-	DrugDealer = {coords = vector3(-1172.02, -1571.98, 4.66), blimpcoords = vector3(-1172.02, -1571.98, 4.66), name = _U('blip_drugdealer'), color = 6, sprite = 378, radius = 0.0, enabled = true},
+	DrugDealer = {coords = vector3(-277.70, 2205.52, 130.40), blimpcoords = vector3(-277.70, 2205.52, 130.40), name = _U('blip_drugdealer'), color = 6, sprite = 378, radius = 0.0, enabled = true},
+	DrugDealer2 = {coords2 = vector3(-1928.55, -3087.33, -6.00), blimpcoords2 = vector3(-1928.55, -3087.33, -6.00), name2 = _U('blip_drugdealer'), color2 = 6, sprite2 = 378, radius2 = 0.0, enabled = true},
+	--DrugDealer3 = {coords3 = vector3(-444.54, 1599.11, 357.15), blimpcoords3 = vector3(-444.54, 1599.11,357.15), name3 = _U('blip_drugdealer'), color3 = 6, sprite3 = 378, radius3 = 0.0, enabled = true},
+	--DrugDealer4 = {coords4 = vector3(1444.51, 6334.24, 22.84), blimpcoords4 = vector3(1444.51, 6334.24, 22.84), name4 = _U('blip_drugdealer'), color4 = 6, sprite4 = 378, radius4 = 0.0, enabled = true},
+	--DrugDealer5 = {coords5 = vector3(1210.06, -3121.64, 4.54), blimpcoords5 = vector3(1210.06, -3121.64, 4.54), name5 = _U('blip_drugdealer'), color5 = 6, sprite5 = 378, radius5 = 0.0, enabled = true},
 	
 	--MoneyWash
-	MoneyWash = {coords = vector3(1119.87, -3195.44, -39.40), blimpcoords = vector3(48.19, 6305.98, 32.36), name = _U('blip_moneywash'), color = 1, sprite = 500, radius = 0.0, enabled = true},
+	MoneyWash = {coords = vector3(1119.87, -3195.44, -39.40), blimpcoords = vector3(-1933.67, 2039.53, 140.83), name = _U('blip_moneywash'), color = 1, sprite = 500, radius = 0.0, enabled = true},
 }
