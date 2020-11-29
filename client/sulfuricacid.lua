@@ -164,5 +164,5 @@ function GetCoordZSulfuricAcid(x, y)
 		end
 	end
 
-	return 18.31
+	return 23.08
 end

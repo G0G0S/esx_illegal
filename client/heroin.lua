@@ -223,5 +223,5 @@ function GetCoordZHeroin(x, y)
 		end
 	end
 
-	return 12.64
+	return 24.21
 end

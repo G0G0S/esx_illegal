@@ -164,5 +164,5 @@ function GetCoordZHydrochloricAcid(x, y)
 		end
 	end
 
-	return 24.5
+	return 4.78
 end

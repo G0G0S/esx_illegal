@@ -164,5 +164,5 @@ function GetCoordZSodiumHydroxide(x, y)
 		end
 	end
 
-	return 100.0
+	return 41.09
 end

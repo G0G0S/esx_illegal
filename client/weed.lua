@@ -222,5 +222,5 @@ function GetCoordZWeed(x, y)
 		end
 	end
 
-	return 53.85
+	return 35.87
 end

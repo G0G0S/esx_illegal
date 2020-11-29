@@ -221,5 +221,5 @@ function GetCoordZCoke(x, y)
 		end
 	end
 
-	return 77
+	return 15.47
 end

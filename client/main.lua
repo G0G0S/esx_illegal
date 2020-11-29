@@ -33,7 +33,12 @@ Citizen.CreateThread(function()
 		local playerPed = PlayerPedId()
 		local coords = GetEntityCoords(playerPed)
 
-		if GetDistanceBetweenCoords(coords, Config.CircleZones.DrugDealer.coords, true) < 1.5 then
+		if GetDistanceBetweenCoords(coords, Config.CircleZones.DrugDealer.coords, true) < 1.5
+		or GetDistanceBetweenCoords(coords, Config.CircleZones.DrugDealer2.coords2, true) < 1.5
+        --or GetDistanceBetweenCoords(coords, Config.CircleZones.DrugDealer3.coords3, true) < 1.5
+        --or GetDistanceBetweenCoords(coords, Config.CircleZones.DrugDealer4.coords4, true) < 1.5
+		--or GetDistanceBetweenCoords(coords, Config.CircleZones.DrugDealer5.coords5, true) < 1.5
+		then
 			if not menuOpen then
 				ESX.ShowHelpNotification(_U('dealer_prompt'))
 
@@ -127,7 +132,8 @@ function CreateBlipCircle(coords, text, radius, color, sprite)
 
 		SetBlipHighDetail(blip, true)
 		SetBlipSprite (blip, sprite)
-		SetBlipScale  (blip, 1.0)
+		SetBlipDisplay(blip, 4)
+		SetBlipScale  (blip, 0.6)
 		SetBlipColour (blip, color)
 		SetBlipAsShortRange(blip, true)
 
@@ -142,6 +148,10 @@ Citizen.CreateThread(function()
 		for k,zone in pairs(Config.CircleZones) do
 			if zone.enabled then
 				CreateBlipCircle(zone.blimpcoords, zone.name, zone.radius, zone.color, zone.sprite)
+				CreateBlipCircle(zone.blimpcoords2, zone.name2, zone.radius2, zone.color2, zone.sprite2)
+				--CreateBlipCircle(zone.blimpcoords3, zone.name3, zone.radius3, zone.color3, zone.sprite3)
+				--CreateBlipCircle(zone.blimpcoords4, zone.name4, zone.radius4, zone.color4, zone.sprite4)
+				--CreateBlipCircle(zone.blimpcoords5, zone.name5, zone.radius5, zone.color5, zone.sprite5)
 			end
 		end
 	end
