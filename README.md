@@ -1,4 +1,5 @@
-# esx_illegal - ESX V1.2.0 (Version Modificada por G0G0S)
+# esx_illegal - ESX V1.2.0 
+# (Version Modificada por G0G0S)
 
 I changed ESX_Drugs and added a lot of features like more drugs and licenses for the money wash and the money wash itself.      
 If you're running on an older verion of ESX(V1.1.0) than please use [this](https://github.com/Xovos/esx_illegal/tree/pre-limit-update) branch.
